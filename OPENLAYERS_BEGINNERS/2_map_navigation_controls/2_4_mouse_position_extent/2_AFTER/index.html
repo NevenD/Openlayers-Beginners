@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Map Position & Extent</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
+</head>
+<style>
+    .map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 15%;
+        font-family: Arial, sans-serif;
+    }
+
+    .pane {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 15%;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 0 20px;
+        -webkit-box-shadow: 10px -1px 7px -8px rgba(0, 0, 0, 0.42);
+        -moz-box-shadow: 10px -1px 7px -8px rgba(0, 0, 0, 0.42);
+        box-shadow: 10px -1px 7px -8px rgba(0, 0, 0, 0.42);
+    }
+
+    .controls {
+        list-style: none;
+        padding: 0;
+    }
+
+    .ol-mouse-position {
+        top: inherit;
+        background-color: white;
+        top: inherit;
+        width: 200px;
+        padding: 10px;
+        bottom: 38px;
+        left: 8px;
+        font-size: 14px;
+        -ms-transform: rotate(7deg);
+        /* IE 9 */
+        -webkit-transform: rotate(7deg);
+        /* Safari */
+        transform: rotate(7deg);
+        box-shadow: 10px 10px 5px #aaaaaa;
+    }
+</style>
+
+<body>
+    <div id="map" class="map"></div>
+    <div class="pane">
+        <h1 class="is-size-5">Coordinate Position</h1>
+        <hr>
+        <div class="box">
+            <label class="label">On Mouse Click</label>
+            <div class="level">
+                <div class="field">
+                    <div class="control">
+                        <p id="mouseClickCoords"></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="is-size-5">Extent</h1>
+        <hr>
+        <div class="box">
+            <label class="label">On mouse click</label>
+            <div class="level">
+                <div class="field">
+                    <div class="control">
+                        <hr>
+                        <p id="mouseClickExtent"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <label class="label">On Mouse move</label>
+            <div class="level">
+                <div class="field">
+                    <div class="control">
+                        <p id="mouseMoveExtent"></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./map.js"></script>
+</body>
+
+</html>

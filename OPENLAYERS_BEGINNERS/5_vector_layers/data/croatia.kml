@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="croatia" id="croatia">
+	<SimpleField name="scalerank" type="int"></SimpleField>
+	<SimpleField name="featurecla" type="string"></SimpleField>
+	<SimpleField name="labelrank" type="int"></SimpleField>
+	<SimpleField name="sovereignt" type="string"></SimpleField>
+	<SimpleField name="sov_a3" type="string"></SimpleField>
+	<SimpleField name="adm0_dif" type="int"></SimpleField>
+	<SimpleField name="level" type="int"></SimpleField>
+	<SimpleField name="type" type="string"></SimpleField>
+	<SimpleField name="admin" type="string"></SimpleField>
+	<SimpleField name="adm0_a3" type="string"></SimpleField>
+	<SimpleField name="geou_dif" type="int"></SimpleField>
+	<SimpleField name="geounit" type="string"></SimpleField>
+	<SimpleField name="gu_a3" type="string"></SimpleField>
+	<SimpleField name="su_dif" type="int"></SimpleField>
+	<SimpleField name="subunit" type="string"></SimpleField>
+	<SimpleField name="su_a3" type="string"></SimpleField>
+	<SimpleField name="brk_diff" type="int"></SimpleField>
+	<SimpleField name="name_long" type="string"></SimpleField>
+	<SimpleField name="brk_a3" type="string"></SimpleField>
+	<SimpleField name="brk_name" type="string"></SimpleField>
+	<SimpleField name="brk_group" type="string"></SimpleField>
+	<SimpleField name="abbrev" type="string"></SimpleField>
+	<SimpleField name="postal" type="string"></SimpleField>
+	<SimpleField name="formal_en" type="string"></SimpleField>
+	<SimpleField name="formal_fr" type="string"></SimpleField>
+	<SimpleField name="note_adm0" type="string"></SimpleField>
+	<SimpleField name="note_brk" type="string"></SimpleField>
+	<SimpleField name="name_sort" type="string"></SimpleField>
+	<SimpleField name="name_alt" type="string"></SimpleField>
+	<SimpleField name="mapcolor7" type="int"></SimpleField>
+	<SimpleField name="mapcolor8" type="int"></SimpleField>
+	<SimpleField name="mapcolor9" type="int"></SimpleField>
+	<SimpleField name="mapcolor13" type="int"></SimpleField>
+	<SimpleField name="pop_est" type="int"></SimpleField>
+	<SimpleField name="gdp_md_est" type="int"></SimpleField>
+	<SimpleField name="pop_year" type="int"></SimpleField>
+	<SimpleField name="lastcensus" type="int"></SimpleField>
+	<SimpleField name="gdp_year" type="int"></SimpleField>
+	<SimpleField name="economy" type="string"></SimpleField>
+	<SimpleField name="income_grp" type="string"></SimpleField>
+	<SimpleField name="wikipedia" type="int"></SimpleField>
+	<SimpleField name="fips_10" type="string"></SimpleField>
+	<SimpleField name="iso_a2" type="string"></SimpleField>
+	<SimpleField name="iso_a3" type="string"></SimpleField>
+	<SimpleField name="iso_n3" type="string"></SimpleField>
+	<SimpleField name="un_a3" type="string"></SimpleField>
+	<SimpleField name="wb_a2" type="string"></SimpleField>
+	<SimpleField name="wb_a3" type="string"></SimpleField>
+	<SimpleField name="woe_id" type="int"></SimpleField>
+	<SimpleField name="adm0_a3_is" type="string"></SimpleField>
+	<SimpleField name="adm0_a3_us" type="string"></SimpleField>
+	<SimpleField name="adm0_a3_un" type="int"></SimpleField>
+	<SimpleField name="adm0_a3_wb" type="int"></SimpleField>
+	<SimpleField name="continent" type="string"></SimpleField>
+	<SimpleField name="region_un" type="string"></SimpleField>
+	<SimpleField name="subregion" type="string"></SimpleField>
+	<SimpleField name="region_wb" type="string"></SimpleField>
+	<SimpleField name="name_len" type="int"></SimpleField>
+	<SimpleField name="long_len" type="int"></SimpleField>
+	<SimpleField name="abbrev_len" type="int"></SimpleField>
+	<SimpleField name="tiny" type="int"></SimpleField>
+	<SimpleField name="homepart" type="int"></SimpleField>
+	<SimpleField name="filename" type="string"></SimpleField>
+</Schema>
+<Folder><name>croatia</name>
+  <Placemark>
+	<name>Croatia</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#croatia">
+		<SimpleData name="scalerank">1</SimpleData>
+		<SimpleData name="featurecla">Admin-0 country</SimpleData>
+		<SimpleData name="labelrank">6</SimpleData>
+		<SimpleData name="sovereignt">Croatia</SimpleData>
+		<SimpleData name="sov_a3">HRV</SimpleData>
+		<SimpleData name="adm0_dif">0</SimpleData>
+		<SimpleData name="level">2</SimpleData>
+		<SimpleData name="type">Sovereign country</SimpleData>
+		<SimpleData name="admin">Croatia</SimpleData>
+		<SimpleData name="adm0_a3">HRV</SimpleData>
+		<SimpleData name="geou_dif">0</SimpleData>
+		<SimpleData name="geounit">Croatia</SimpleData>
+		<SimpleData name="gu_a3">HRV</SimpleData>
+		<SimpleData name="su_dif">0</SimpleData>
+		<SimpleData name="subunit">Croatia</SimpleData>
+		<SimpleData name="su_a3">HRV</SimpleData>
+		<SimpleData name="brk_diff">0</SimpleData>
+		<SimpleData name="name_long">Croatia</SimpleData>
+		<SimpleData name="brk_a3">HRV</SimpleData>
+		<SimpleData name="brk_name">Croatia</SimpleData>
+		<SimpleData name="abbrev">Cro.</SimpleData>
+		<SimpleData name="postal">HR</SimpleData>
+		<SimpleData name="formal_en">Republic of Croatia</SimpleData>
+		<SimpleData name="name_sort">Croatia</SimpleData>
+		<SimpleData name="mapcolor7">5</SimpleData>
+		<SimpleData name="mapcolor8">4</SimpleData>
+		<SimpleData name="mapcolor9">5</SimpleData>
+		<SimpleData name="mapcolor13">1</SimpleData>
+		<SimpleData name="pop_est">4489409</SimpleData>
+		<SimpleData name="gdp_md_est">82390</SimpleData>
+		<SimpleData name="pop_year">-99</SimpleData>
+		<SimpleData name="lastcensus">2011</SimpleData>
+		<SimpleData name="gdp_year">-99</SimpleData>
+		<SimpleData name="economy">2. Developed region: nonG7</SimpleData>
+		<SimpleData name="income_grp">2. High income: nonOECD</SimpleData>
+		<SimpleData name="wikipedia">-99</SimpleData>
+		<SimpleData name="iso_a2">HR</SimpleData>
+		<SimpleData name="iso_a3">HRV</SimpleData>
+		<SimpleData name="iso_n3">191</SimpleData>
+		<SimpleData name="un_a3">191</SimpleData>
+		<SimpleData name="wb_a2">HR</SimpleData>
+		<SimpleData name="wb_a3">HRV</SimpleData>
+		<SimpleData name="woe_id">-99</SimpleData>
+		<SimpleData name="adm0_a3_is">HRV</SimpleData>
+		<SimpleData name="adm0_a3_us">HRV</SimpleData>
+		<SimpleData name="adm0_a3_un">-99</SimpleData>
+		<SimpleData name="adm0_a3_wb">-99</SimpleData>
+		<SimpleData name="continent">Europe</SimpleData>
+		<SimpleData name="region_un">Europe</SimpleData>
+		<SimpleData name="subregion">Southern Europe</SimpleData>
+		<SimpleData name="region_wb">Europe &amp; Central Asia</SimpleData>
+		<SimpleData name="name_len">7</SimpleData>
+		<SimpleData name="long_len">7</SimpleData>
+		<SimpleData name="abbrev_len">4</SimpleData>
+		<SimpleData name="tiny">-99</SimpleData>
+		<SimpleData name="homepart">1</SimpleData>
+		<SimpleData name="filename">HRV.geojson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>18.82983808765,45.9088776718918 19.0727689958542,45.5215111354321 19.3904757015846,45.2365156113424 19.0054862810101,44.8602336696091 18.5532141455916,45.0815896673314 17.8617834815264,45.0677403834771 17.002146030351,45.2337767604309 16.5349394060002,45.2116075709777 16.3181567725359,45.0041266953259 15.9593673031334,45.2337767604309 15.750026075919,44.8187116562625 16.2396602718845,44.3511432968857 16.4564429053488,44.0412397324313 16.9161564470173,43.6677224798257 17.2973734880344,43.4463406438874 17.674921502359,43.0285625270236 18.56,42.65 18.4500163103048,42.4799913600293 17.5099703304833,42.8499946152391 16.9300057308716,43.2099984808004 16.0153845557377,43.5072154811272 15.1744539730521,44.2431912298279 15.3762504411518,44.317915350922 14.9203092790405,44.7384839951294 14.9016024105509,45.0760602890761 14.25874759284,45.2337767604309 13.952254672917,44.8021235214968 13.6569755388012,45.1369351263159 13.6794031104158,45.484149074885 13.7150598486972,45.5003237981924 14.4119682145855,45.4661656764474 14.5951094906279,45.6349409043128 14.935243767973,45.4716950547027 15.3276745947974,45.4523163925933 15.3239538916724,45.7317825384277 15.6715295752676,45.8341535507979 15.7687329444086,46.2381082220235 16.5648083838649,46.5037509222198 16.8825150895954,46.3806318222844 17.6300663591296,45.9517691106941 18.4560624528829,45.7594811061361 18.82983808765,45.9088776718918</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+</Folder>
+</Document></kml>

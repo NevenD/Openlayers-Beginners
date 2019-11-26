@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Extending Map Controls</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
+</head>
+<style>
+    .map {
+        width: 100%;
+        height: 600px;
+    }
+
+    .ol-scale-line {
+        bottom: 180px;
+    }
+
+    .ol-full-screen {
+        top: 50px;
+    }
+
+    .ol-mouse-position {
+        top: 100px;
+        font-weight: bolder;
+    }
+
+    .ol-zoom-extent {
+        top: 300px;
+    }
+</style>
+
+<body>
+    <div id="map" class="map"></div>
+    <script src="./map.js"></script>
+</body>
+
+</html>
