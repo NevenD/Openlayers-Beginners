@@ -19,17 +19,6 @@ var map = new ol.Map({
 
 var drawInteraction;
 
-
-var select = new ol.interaction.Select();
-var modify = new ol.interaction.Modify({
-    features: select.getFeatures()
-});
-
-
-
-map.addInteraction(select);
-map.addInteraction(modify);
-
 var drawingType = document.getElementById("drawFeatures");
 var selectedValue = drawingType.options[drawingType.selectedIndex].value;
 drawingType.addEventListener("change", function (evt) {
