@@ -4,641 +4,471 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-  <!--<![endif]-->
+<!--<![endif]-->
 
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <base href="http://127.0.0.1:5500/OPENLAYERS_BEGINNERS/" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      type="text/css"
-    />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="http://127.0.0.1:5500/OPENLAYERS_BEGINNERS/" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" type="text/css" />
+</head>
 
-  <style>
-    @media screen and (min-width: 1024px) {
-      .navbar-brand {
-        margin-left: 0px !important;
-      }
+<style>
+  @media screen and (min-width: 1024px) {
+    .navbar-brand {
+      margin-left: 0px !important;
     }
+  }
 
-    .ol-mouse-position {
-      top: inherit;
-      bottom: 8px;
-      left: 8px;
-      background-color: rgba(255, 255, 255, 0.4);
-      border-radius: 2px;
-      width: 100px;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-    }
-  </style>
+  .ol-mouse-position {
+    top: inherit;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    width: 100px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
+</style>
 
-  <body>
-    <div class="container">
-      <nav class="navbar is-primary">
-        <div class="navbar-brand">
-          <a class="navbar-item is-size-5" href="#">
-            OpenLayers for beginners
+<body>
+  <div class="container">
+    <nav class="navbar is-primary">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5" href="#">
+          OpenLayers for beginners
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://github.com/NevenD/Openlayers-Beginners">
+            GitHub repo
           </a>
-        </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a
-              class="navbar-item"
-              href="https://github.com/NevenD/Openlayers-Beginners"
-            >
-              GitHub repo
-            </a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"> Documentation </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Documentation </a>
 
-              <div class="navbar-dropdown">
-                <a
-                  class="navbar-item"
-                  href="https://openlayers.org/en/latest/apidoc/"
-                >
-                  OpenLayers API
-                </a>
-                <a
-                  class="navbar-item"
-                  href="https://openlayers.org/en/latest/doc/faq.html"
-                >
-                  OpenLayers FAQ
-                </a>
-                <a
-                  class="navbar-item"
-                  href="https://openlayers.org/en/latest/examples/"
-                >
-                  OpenLayers examples
-                </a>
-                <a class="navbar-item" href="https://openlayers.org/3rd-party/">
-                  OpenLayers plugins
-                </a>
-                <hr class="navbar-divider" />
-                <a
-                  class="navbar-item"
-                  href="https://spatialreference.org/ref/epsg/"
-                >
-                  EPSG codes
-                </a>
-              </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://openlayers.org/en/latest/apidoc/">
+                OpenLayers API
+              </a>
+              <a class="navbar-item" href="https://openlayers.org/en/latest/doc/faq.html">
+                OpenLayers FAQ
+              </a>
+              <a class="navbar-item" href="https://openlayers.org/en/latest/examples/">
+                OpenLayers examples
+              </a>
+              <a class="navbar-item" href="https://openlayers.org/3rd-party/">
+                OpenLayers plugins
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item" href="https://spatialreference.org/ref/epsg/">
+                EPSG codes
+              </a>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"> Help </a>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Help </a>
 
-              <div class="navbar-dropdown">
-                <a
-                  class="navbar-item"
-                  href="https://github.com/openlayers/openlayers/blob/master/changelog/upgrade-notes.md"
-                >
-                  OpenLayers upgrade notes
-                </a>
-                <a
-                  class="navbar-item"
-                  href="https://github.com/openlayers/openlayers/releases"
-                >
-                  OpenLayers releases
-                </a>
-                <a
-                  class="navbar-item"
-                  href="https://github.com/NevenD/Openlayers-Beginners"
-                >
-                  Udemy Q & A
-                </a>
-                <hr class="navbar-divider" />
-                <a
-                  class="navbar-item"
-                  href="https://stackoverflow.com/questions/tagged/openlayers"
-                >
-                  StackOverflow Q & A
-                </a>
-              </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://github.com/openlayers/openlayers/blob/master/changelog/upgrade-notes.md">
+                OpenLayers upgrade notes
+              </a>
+              <a class="navbar-item" href="https://github.com/openlayers/openlayers/releases">
+                OpenLayers releases
+              </a>
+              <a class="navbar-item" href="https://github.com/NevenD/Openlayers-Beginners">
+                Udemy Q & A
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item" href="https://stackoverflow.com/questions/tagged/openlayers">
+                StackOverflow Q & A
+              </a>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"> Datasets repo </a>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> Datasets repo </a>
 
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="http://geojson.io/#map=2/20.0/0.0">
-                  Geojson Validator
-                </a>
-                <a class="navbar-item" href="https://inspire.ec.europa.eu/">
-                  Inspire Directive
-                </a>
-                <a
-                  class="navbar-item"
-                  href="https://inspire-geoportal.ec.europa.eu/"
-                >
-                  Inspire GeoPortal
-                </a>
-                <hr class="navbar-divider" />
-                <a
-                  class="navbar-item"
-                  href="https://datahub.io/collections/geojson"
-                >
-                  Geojson DataHub
-                </a>
-                <a class="navbar-item" href="https://catalog.data.gov/dataset">
-                  Geojson Catalog Data
-                </a>
-                <hr class="navbar-divider" />
-                <a
-                  class="navbar-item"
-                  href="http://maps.stamen.com/#watercolor/12/37.7706/-122.3782"
-                >
-                  Stamen layers
-                </a>
-                <a class="navbar-item" href="https://www.thunderforest.com/">
-                  ThunderForest API
-                </a>
-                <a class="navbar-item" href="https://www.bingmapsportal.com/">
-                  Bing Map API
-                </a>
-              </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="http://geojson.io/#map=2/20.0/0.0">
+                Geojson Validator
+              </a>
+              <a class="navbar-item" href="https://inspire.ec.europa.eu/">
+                Inspire Directive
+              </a>
+              <a class="navbar-item" href="https://inspire-geoportal.ec.europa.eu/">
+                Inspire GeoPortal
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item" href="https://datahub.io/collections/geojson">
+                Geojson DataHub
+              </a>
+              <a class="navbar-item" href="https://catalog.data.gov/dataset">
+                Geojson Catalog Data
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item" href="http://maps.stamen.com/#watercolor/12/37.7706/-122.3782">
+                Stamen layers
+              </a>
+              <a class="navbar-item" href="https://www.thunderforest.com/">
+                ThunderForest API
+              </a>
+              <a class="navbar-item" href="https://www.bingmapsportal.com/">
+                Bing Map API
+              </a>
             </div>
           </div>
         </div>
-      </nav>
-      <section class="section">
-        <div class="container">
-          <h3 class="title">OpenLayers Dashboard</h3>
-          <div class="notification">
-            Provided links contains examples presented in the video sections.
-            Clicking on list item you'll see live example in action. If you want
-            to check or compare your code with source navigate to
-            <strong
-              ><a href="https://github.com/NevenD/Openlayers-Beginners"
-                >Openlayers-Beginners repository</a
-              ></strong
-            >
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h3 class="title">OpenLayers Dashboard</h3>
+        <div class="notification">
+          Provided links contains examples presented in the video sections.
+          Clicking on list item you'll see live example in action. If you want
+          to check or compare your code with source navigate to
+          <strong><a href="https://github.com/NevenD/Openlayers-Beginners">Openlayers-Beginners repository</a></strong>
+        </div>
+        <hr />
+        <div class="columns">
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">OpenLayers Basics</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_1_simple_full_screen_map/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Simple Fullscreen map
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_2_map_options/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Map & View Options
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_3_zoom_extent_limits/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Zoom & Extent limits
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_4_map_overlay/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Map Overlay
+              </a>
+            </nav>
           </div>
-          <hr />
-          <div class="columns">
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">OpenLayers Basics</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_1_simple_full_screen_map/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Simple Fullscreen map
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_2_map_options/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Map & View Options
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_3_zoom_extent_limits/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Zoom & Extent limits
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/1_openlayers_basics/1_4_map_overlay/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Map Overlay
-                </a>
-              </nav>
-            </div>
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Map navigation & controls</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_1_extending_map_controls/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Extending Map Controls
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_2_map_navigation/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Map Navigation
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_3_map_resolution/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Map Resolution
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_4_mouse_position_extent/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Mouse Position & Extent
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_5_view_animations/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  View Animations
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_6_toggling_base_layer/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Toggling Base Layer
-                </a>
-              </nav>
-            </div>
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Projections</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/3_projections/3_1_coordinate_transformation/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Coordinate Transformations
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/3_projections/3_2_extent_transformation/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Extent Transformations
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/3_projections/3_3_custom_projections_proj4/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Custom Projections with Proj4
-                </a>
-              </nav>
-            </div>
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Raster layers</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_1_adding_mutliple_layers/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Adding Multiple Layers
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_2_osm_layers/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  OSM Layers
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_3_thunderforset_layers/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  ThunderForest Layers
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_4_bing_layers/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Bing Layers
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_5_stamen_layers/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Stamen Layers
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_6_adding_wms_layer/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Adding WMS Layer
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_7_raster_opacity/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Raster Opacity
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_8_adding_static_image/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Adding Static Image
-                </a>
-              </nav>
-            </div>
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Map navigation & controls</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_1_extending_map_controls/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Extending Map Controls
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_2_map_navigation/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Map Navigation
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_3_map_resolution/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Map Resolution
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_4_mouse_position_extent/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Mouse Position & Extent
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_5_view_animations/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                View Animations
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/2_map_navigation_controls/2_6_toggling_base_layer/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Toggling Base Layer
+              </a>
+            </nav>
           </div>
-          <hr />
-          <div class="columns">
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Vector layers</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_1_creating_features/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Creating Features (point, linestring, polygon)
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_2_geojson_format/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  GeoJSON Format
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_3_KML_format/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  KML Format
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_4_GPX_format/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  GPX Format
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_5_GML_format/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  GML Format
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_6_WKT_format/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  WKT Format
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_7_creating_heatmap/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Creating HeatMap
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_8_creating_clusters/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Creating Clusters
-                </a>
-              </nav>
-            </div>
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Map & Layer Interactions</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_1_draw_features/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Draw Features
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_2_modify_features/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Modify Features
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_3_delete_features/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Delete Features
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_4_create_feature_list/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Create Feature List
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_5_zoom_to_extent/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Zoom To Extent
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_6_read_feature_properties/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Read Feature Properties
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_7_drag_and_drop/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Drag and Drop Vectors
-                </a>
-              </nav>
-            </div>
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Styling Features</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/7_styling_features/7_1_styling_object/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Styling Vector Data
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/7_styling_features/7_2_styling_vectors_using_features/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Styling Vectors Using Feature Values
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/7_styling_features/7_3_adding_labels/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Adding labels to polygons
-                </a>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/7_styling_features//7_4_adding_icons/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Adding Icons
-                </a>
-              </nav>
-            </div>
-
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">Third party libraries & Navigation</p>
-                <a
-                  class="panel-block"
-                  href="/OPENLAYERS_BEGINNERS/8_third_party_libraries/1_1_integrating_turf/2_AFTER/index.html"
-                >
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Integrating Turf
-                </a>
-                <a class="panel-block">
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Integrating JSTS
-                </a>
-                <a class="panel-block">
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Geolocation
-                </a>
-              </nav>
-            </div>
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Projections</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/3_projections/3_1_coordinate_transformation/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Coordinate Transformations
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/3_projections/3_2_extent_transformation/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Extent Transformations
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/3_projections/3_3_custom_projections_proj4/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Custom Projections with Proj4
+              </a>
+            </nav>
           </div>
-          <hr />
-          <div class="columns">
-            <div class="column">
-              <nav class="panel">
-                <p class="panel-heading">OpenLayers Production Build</p>
-                <a class="panel-block" href="#">
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Creating simple map application
-                </a>
-                <a class="panel-block" href="#">
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Create Measure Application
-                </a>
-                <a class="panel-block" href="#">
-                  <span class="panel-icon">
-                    <i class="fas fa-map" aria-hidden="true"></i>
-                  </span>
-                  Integrate Cesium
-                </a>
-              </nav>
-            </div>
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Raster layers</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_1_adding_mutliple_layers/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Adding Multiple Layers
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_2_osm_layers/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                OSM Layers
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_3_thunderforset_layers/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                ThunderForest Layers
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_4_bing_layers/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Bing Layers
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_5_stamen_layers/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Stamen Layers
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_6_adding_wms_layer/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Adding WMS Layer
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_7_raster_opacity/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Raster Opacity
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/4_raster_layers/4_8_adding_static_image/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Adding Static Image
+              </a>
+            </nav>
           </div>
         </div>
-      </section>
-    </div>
-  </body>
+        <hr />
+        <div class="columns">
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Vector layers</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_1_creating_features/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Creating Features (point, linestring, polygon)
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_2_geojson_format/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                GeoJSON Format
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_3_KML_format/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                KML Format
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_4_GPX_format/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                GPX Format
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_5_GML_format/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                GML Format
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_6_WKT_format/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                WKT Format
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_7_creating_heatmap/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Creating HeatMap
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/5_vector_layers/5_8_creating_clusters/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Creating Clusters
+              </a>
+            </nav>
+          </div>
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Map & Layer Interactions</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_1_draw_features/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Draw Features
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_2_modify_features/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Modify Features
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_3_delete_features/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Delete Features
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_4_create_feature_list/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Create Feature List
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_5_zoom_to_extent/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Zoom To Extent
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_6_read_feature_properties/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Read Feature Properties
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/6_map_layer_interactions/6_7_drag_and_drop/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Drag and Drop Vectors
+              </a>
+            </nav>
+          </div>
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Styling Features</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/7_styling_features/7_1_styling_object/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Styling Vector Data
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/7_styling_features/7_2_styling_vectors_using_features/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Styling Vectors Using Feature Values
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/7_styling_features/7_3_adding_labels/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Adding labels to polygons
+              </a>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/7_styling_features/7_4_adding_icons/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Adding Icons
+              </a>
+            </nav>
+          </div>
+
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">Third party libraries & Navigation</p>
+              <a class="panel-block" href="/OPENLAYERS_BEGINNERS/8_third_party_libraries/1_1_integrating_turf/2_AFTER/index.html">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Integrating Turf
+              </a>
+              <a class="panel-block">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Integrating JSTS
+              </a>
+              <a class="panel-block">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Geolocation
+              </a>
+            </nav>
+          </div>
+        </div>
+        <hr />
+        <div class="columns">
+          <div class="column">
+            <nav class="panel">
+              <p class="panel-heading">OpenLayers Production Build</p>
+              <a class="panel-block" href="#">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Creating simple map application
+              </a>
+              <a class="panel-block" href="#">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Create Measure Application
+              </a>
+              <a class="panel-block" href="#">
+                <span class="panel-icon">
+                  <i class="fas fa-map" aria-hidden="true"></i>
+                </span>
+                Integrate Cesium
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
